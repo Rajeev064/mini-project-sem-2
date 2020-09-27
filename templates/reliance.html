@@ -14,9 +14,9 @@
 			<div class="right">
 				<h2 style="color: azure;">Stock Predictor</h2>
 				<form action="{{ url_for('predict_reliance')}}" method="POST">
-				<input id="open" name="open" class="field" placeholder="Opening Price">
-				<input id="high" name="high" class="field" placeholder="Highest price">
-				<input id="low" name="low" class="field" placeholder="Lowest price">
+					<input id="open" name="open" class="field" type="number" step= "any" placeholder="Opening Price" required>
+					<input id="high" name="high" class="field" type="number" step= "any" placeholder="Highest price" required>
+					<input id="low" name="low" class="field" type="number" step= "any" placeholder="Lowest price" required>
 			<button class="btn">Predict</button>
     </form>
     <br>
