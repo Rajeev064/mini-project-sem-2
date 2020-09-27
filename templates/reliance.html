@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>Reliance-Stock Predictor</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static' , filename ='rel.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/icon" href="https://www.flaticon.com/svg/static/icons/svg/2422/2422796.svg"> 
+</head>
+<body>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2 style="color: azure;">Stock Predictor</h2>
+				<form action="{{ url_for('predict_reliance')}}" method="POST">
+				<input id="open" name="open" class="field" placeholder="Opening Price">
+				<input id="high" name="high" class="field" placeholder="Highest price">
+				<input id="low" name="low" class="field" placeholder="Lowest price">
+			<button class="btn">Predict</button>
+    </form>
+    <br>
+    <div style="color: azure;">{{prediction_text}}</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

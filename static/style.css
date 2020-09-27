@@ -1,0 +1,81 @@
+
+  
+body{ 
+    margin: 0;
+    padding: 0;
+      height: 100%;
+      width: 100%;
+      }
+
+      .carousel-inner{
+        max-width: 100%;
+        height: auto !important;
+        }
+      .carousel-item {
+          height: 100vh;
+          min-height: 350px;
+          width: 100%;
+          background: no-repeat center center scroll;
+         -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          
+            background-size: cover; 
+          /*position:absolute;
+         width: 100%;
+         top:0;
+           */
+      }
+      .carousel-item img{
+        display: block;
+        height: auto;
+        width: 100%;
+      } 
+    
+    .modal{
+        margin-top: 150px;
+        margin-right: 50px;
+        margin-left: 50px;
+      }
+      
+       .button{
+        /*   border-color: #fff !important ;
+         */ background-color: greenyellow;
+            border: none;
+           color: white;
+           padding: 15px 32px;
+           text-align: center;
+           font-size: 16px;
+           cursor: pointer;
+           border-radius: 15px;
+       }
+       
+       .button:hover{
+           background-color:#ff073a;
+           color: black;
+       }
+       .link:hover{
+        color: #ff073a !important;
+       }
+       .fa-twitter:hover, .fa-instagram:hover, .fa-facebook:hover{
+           color: #ff073a !important;
+       }
+        a:hover{
+            text-decoration: none;
+        }
+        
+        .container-lg{
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-attachment: fixed;
+          background-size: cover;
+      /*   position: fixed; */
+         overflow: hidden; 
+         width: 100%;
+        padding: 0;
+       
+        }
+        .link{
+          color: white;
+        }
+        

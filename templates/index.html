@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>Stock Price Predictor</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static' , filename ='style.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+	<link rel="icon" type="image/icon" href="https://www.flaticon.com/svg/static/icons/svg/2422/2422796.svg"> 
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark   bg-dark sticky-top" id="navigation"> 
+		<a class="navbar-brand"><img src="https://www.flaticon.com/svg/static/icons/svg/2422/2422796.svg" width="180" height="60"></a> 
+		<br> 
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target"> <span class="navbar-toggler-icon"></span> </button> 
+		<div class="collapse navbar-collapse" id="collapse_target"> 
+		 <ul class="navbar-nav ml-auto"> 
+		  <li class="nav-item"> <a class="nav-link" href="/index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a> </li> 
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Companies
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <a class="dropdown-item" href="/Reliance">Reliance</a>
+			  <a class="dropdown-item" href="/TCS">TCS</a>
+			  <a class="dropdown-item" href="/Maruti">Maruti</a>
+		  </li>
+		  <li class="nav-item"> <a class="nav-link" href="{{ url_for('.home', _anchor='about') }}"><i class="fa fa-info-circle" aria-hidden="true"></i> About Project</a> </li> 
+		  <!-- <li class="nav-item"> <a class="nav-link" href="/Reliance">Reliance</a> </li> 
+		  <li class="nav-item"> <a class="nav-link" href="/TCS">TCS</a> </li> 
+		  <li class="nav-item"> <a class="nav-link" href="/Maruti">Maruti</a> </li>  -->
+		 </ul> 
+		</div> 
+	   </nav> 
+	   
+  <div class="container-lg"> 
+	<div id="carouselExampleIndicators" class="carousel slide full-screen-carousel" data-ride="carousel"> 
+	 <ol class="carousel-indicators"> 
+	  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> 
+	  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> 
+	  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> 
+	 </ol> 
+	 <div class="carousel-inner" role="listbox"> 
+	  <div class="carousel-item active" style="background-image: url('https://i.pinimg.com/736x/17/3b/c5/173bc5119dd188f88d4a66752e7b1f3b.jpg')"> 
+		<div class="carousel-caption"> 
+		  <h3 class="display-5"><b>Reliance</b></h3> 
+		  <br> 
+		  <a href="/Reliance" class="button">Stock Predictor</a> 
+		  <br> 
+		  <br> 
+		 </div> 
+		</div> 
+	  <div class="carousel-item" style="background-image: url('https://i.pinimg.com/736x/d1/d0/0d/d1d00d39d2d73a881a8fc2e7ed44cd96.jpg')"> 
+		<div class="carousel-caption"> 
+	  <h3 class="display-5"><b>TCS</b></h3> 
+	  <br> 
+	  <a href="/TCS" class="button">Stock Predictor</a> 
+	  <br> 
+	  <br> 
+	 </div> 
+	</div> 
+	   <div class="carousel-item" style="background-image: url('https://i.pinimg.com/736x/d2/6a/2f/d26a2f5d77b89365b8fecd1e9652526a.jpg')"> 
+		  <div class="carousel-caption"> 
+		<h3 class="display-5"><b>Maruti</b></h3> 
+		<br> 
+		<a href="/Maruti" class="button">Stock Predictor</a> 
+		<br> 
+		<br> 
+	   </div> 
+	  </div> 
+	 </div> 
+	 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> 
+	 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> 
+	</div> 
+   </div> 
+   <div id="about" style="background-color: #343a40!important;text-align: center;margin-bottom: -20px; color:azure">
+       <h2>About project</h2>
+    <p>The project is related to<b> Stock Price Prediction</b> using certain <b>Multiple Linear Regression</b>.<br> In this Project we made prediction by taking input values as <b>Opening Price,High Price,Low Price</b>
+    </p>
+   </div>
+   <div class="footer" id="last" style="text-align: center; background-color: #343a40!important; margin: 0; background-size: auto;  bottom:0; width:100%;  height:135px;"> 
+    <br><br>
+    <a href="/Reliance" style="color: aliceblue;">Reliance</a> <br>
+	<a href="/TCS" style="color: aliceblue;">TCS</a> <br>
+	<a href="/Maruti" style="color: aliceblue;">Maruti</a><br >
+	<br> 
+  </div>
+</body>
+</html>
